@@ -20,11 +20,11 @@
   "Gray on black for your focused hacking sessions.")
 
 (let ((class '((class color) (min-colors 10)))
-      (black "black")
-      (white "white")
-      (lgray "light gray")
-      (dgray "dark gray")
-      (sgray "light slate gray"))
+      (black "#000000")
+      (white "#ffffff")
+      (lgray "#d3d3d3")
+      (dgray "#a9a9a9")
+      (sgray "#778899"))
 
   (custom-theme-set-faces
    'monochrome
@@ -33,10 +33,10 @@
    `(cursor ((,class (:background ,lgray))))
 
    ;; Highlighting faces
-   `(fringe ((t (:background "black" :foreground "light gray"))))
+   `(fringe ((t (:background ,black :foreground ,lgray))))
    `(highlight ((,class (:foreground ,black :background ,lgray))))
    `(region ((,class (:foreground ,black :background ,lgray))))
-   `(region ((t (:background "dim gray" :foreground "white"))))
+   `(region ((t (:background ,dgray :foreground ,white))))
    `(secondary-selection ((,class (:foreground: ,black :background ,sgray))))
    `(isearch ((,class (:foreground ,black :background ,lgray))))
    `(lazy-highlight ((,class (:foreground ,black :background ,lgray))))
@@ -44,8 +44,8 @@
    `(trailing-whitespace ((,class (:background "red"))))
 
    ;; Mode line faces
-   `(mode-line ((t (:background "black" :foreground "black" :box (:line-width -1 :style released-button)))))
-   `(mode-line-inactive ((t (:background "dim gray" :foreground "black" :box (:line-width -1 :style released-button)))))
+   `(mode-line ((t (:background ,dgray :foreground ,white :box (:line-width -1 :style released-button)))))
+   `(mode-line-inactive ((t (:background ,dgray :foreground ,lgray :box (:line-width -1 :style released-button)))))
 
    ;; Whitespace-mode
    `(whitespace-empty ((,class (:background unspecified :foreground "red"))))
@@ -184,7 +184,7 @@
    `(helm-buffer-saved-out ((t (:foreground ,lgray :background ,black))))
    `(helm-buffer-size ((t (:foreground ,lgray :background ,black))))
    `(helm-ff-directory ((t (:foreground ,white :background ,black :weight bold))))
-   `(helm-match ((t (:background "white" :foreground "black"))))
+   `(helm-match ((t (:background ,white :foreground ,black))))
    `(helm-ff-file ((t (:foreground ,lgray :background ,black :weight normal))))
    `(helm-ff-executable ((t (:foreground ,lgray :background ,black :weight normal))))
    `(helm-ff-invalid-symlink ((t (:foreground ,white :background ,black :weight bold))))
@@ -206,7 +206,7 @@
    `(flyspell-incorrect ((,class (:weight unspecified :foreground unspecified
                                           :slant unspecified :underline ,lgray)))))
 
-  ;; Magit
+    ;; Magit
   '(magit-diff-add ((t (:foreground "dark sea green"))))
   '(magit-diff-del ((t (:foreground "light coral"))))
   '(magit-diff-file-header ((t (:box (:line-width 2 :color "grey75" :style released-button)))))
