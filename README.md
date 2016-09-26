@@ -19,12 +19,12 @@ Patches welcome!
 
 ### Source Code
 
-![Monochrome-dark Theme for Emacs 24: Source Code](https://github.com/mnsanghvi/monochrome-theme.el/raw/master/monochrome-theme.el.png)
+![Monochrome-dark Theme for Emacs 24: Source Code](https://github.com/mnsanghvi/monochrome-theme.el/raw/master/screenshots/elisp-dark.png)
 
 ### Speedbar
 
-![Monochrome-dark Theme for Emacs 24: Speedbar](https://github.com/mnsanghvi/monochrome-theme.el/raw/master/speedbar.png)
+![Monochrome-dark Theme for Emacs 24: Speedbar](https://github.com/mnsanghvi/monochrome-theme.el/raw/master/screenshots/speedbar-dark.png)
 
 ### ido
 
-![Monochrome-dark Theme for Emacs 24: ido](https://github.com/mnsanghvi/monochrome-theme.el/raw/master/ido.png)
+![Monochrome-dark Theme for Emacs 24: ido](https://github.com/mnsanghvi/monochrome-theme.el/raw/master/screenshots/ido-dark.png)
