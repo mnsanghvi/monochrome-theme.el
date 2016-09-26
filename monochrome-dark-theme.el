@@ -1,4 +1,4 @@
-;;; monochrome-theme.el --- A dark Emacs 24 theme for your focused hacking sessions
+;;; monochrome-dark-theme.el --- A dark Emacs 24 theme for your focused hacking sessions
 
 ;; Copyright (C) 2011-2014 Xavier Noria
 ;;
@@ -6,11 +6,11 @@
 ;;
 ;; Just throw this file into ~/.emacs.d and
 ;;
-;;     M-x load-theme RET monochrome RET
+;;     M-x load-theme RET monochrome-dark RET
 ;;
 ;; or put in your init file
 ;;
-;;     (load-theme 'monochrome)
+;;     (load-theme 'monochrome-dark)
 ;;
 ;; This theme is based on the builtin dichromacy theme.
 ;;

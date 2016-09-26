@@ -1,4 +1,4 @@
-;;; monochrome-bright-theme.el --- A bright Emacs 24 theme for your focused hacking sessions during the day
+;;; monochrome-light-theme.el --- A light Emacs 24 theme for your focused hacking sessions during the day
 
 ;; Copyright (C) 2011-2014 Xavier Noria
 ;;
@@ -6,17 +6,17 @@
 ;;
 ;; Just throw this file into ~/.emacs.d and
 ;;
-;; M-x load-theme RET monochrome-bright RET
+;; M-x load-theme RET monochrome-light RET
 ;;
 ;; or put in your init file
 ;;
-;; (load-theme 'monochrome-bright)
+;; (load-theme 'monochrome-light)
 ;;
 ;; This theme is based on the builtin dichromacy theme.
 ;;
 ;; Works with Emacs 24.
 
-(deftheme monochrome-bright
+(deftheme monochrome-light
   "Black on white for your focused hacking sessions during the day.")
 
 (let ((class '((class color) (min-colors 10)))
@@ -27,7 +27,7 @@
       (sgray "#606060"))
 
   (custom-theme-set-faces
-   'monochrome-bright
+   'monochrome-light
 
    `(default ((,class (:foreground ,black :background ,white))))
    `(cursor ((,class (:background ,black))))
@@ -204,7 +204,7 @@
    `(flyspell-incorrect ((,class (:weight unspecified :foreground unspecified :slant unspecified :underline ,dgray)))))
 
   (custom-theme-set-variables
-   'monochrome-bright
+   'monochrome-light
    `(ansi-color-names-vector [,white ,dgray ,lgray ,sgray])))
 
 ;; Autoload for MELPA
@@ -214,10 +214,10 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'monochrome-bright)
+(provide-theme 'monochrome-light)
 
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; End:
 
-;;; monochrome-bright-theme.el ends here
+;;; monochrome-light-theme.el ends here
