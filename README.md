@@ -23,7 +23,7 @@ Patches welcome!
 
 ### Speedbar
 
-![Monochrome Theme for Emacs 24: Speedbar](https://github.com/mnsanghvi/monchrome-theme.el/raw/master/speedbar.png)
+![Monochrome Theme for Emacs 24: Speedbar](https://github.com/mnsanghvi/monochrome-theme.el/raw/master/speedbar.png)
 
 ### ido
 
