@@ -19,21 +19,32 @@
 (deftheme monochrome-dark
   "Gray on black for your focused hacking sessions.")
 
+;; colours selected from http://www.javascripter.net/faq/colornam.htm
+
 (let ((class '((class color) (min-colors 10)))
       (black "#000000")
       (white "#ffffff")
       (lgray "#d3d3d3")
       (dgray "#a9a9a9")
-      (sgray "#778899"))
+      (sgray "#778899")
+      (brown "#a52a2a")
+      (red "#ff2600")
+      (green "#008000")
+      (yellow "#e8e800")
+      (fringe-bg "#666699")
+      (paren-match-bg "#3b99fc")
+      (magit-diff-add-fg "#8FBC8F")
+      (magit-diff-del-fg "#F08080")
+      (magit-diff-file-header "#BFBFBF"))
 
   (custom-theme-set-faces
-   'monochrome
+   'monochrome-dark
 
    `(default ((,class (:foreground ,lgray :background ,black))))
    `(cursor ((,class (:background ,lgray))))
 
    ;; Highlighting faces
-   `(fringe ((t (:background ,black :foreground ,lgray))))
+   `(fringe ((t (:background ,fringe-bg :foreground ,black))))
    `(highlight ((,class (:foreground ,black :background ,lgray))))
    `(region ((,class (:foreground ,black :background ,lgray))))
    `(region ((t (:background ,dgray :foreground ,white))))
@@ -41,22 +52,22 @@
    `(isearch ((,class (:foreground ,black :background ,lgray))))
    `(lazy-highlight ((,class (:foreground ,black :background ,lgray))))
    `(linum ((,class (:foreground ,dgray :slant italic))))
-   `(trailing-whitespace ((,class (:background "red"))))
+   `(trailing-whitespace ((,class (:background ,red))))
 
    ;; Mode line faces
    `(mode-line ((t (:background ,dgray :weight bold :foreground ,black))))
    `(mode-line-inactive ((t (:background ,dgray :foreground ,lgray :box (:line-width -1 :style released-button)))))
 
    ;; Whitespace-mode
-   `(whitespace-empty ((,class (:background unspecified :foreground "red"))))
+   `(whitespace-empty ((,class (:background unspecified :foreground ,red))))
    `(whitespace-line ((,class (:background ,lgray :foreground ,black))))
 
    ;; Escape and prompt faces
    `(minibuffer-prompt ((,class (:weight bold :foreground ,lgray))))
    `(escape-glyph ((,class (:foreground ,lgray))))
-   `(error ((,class (:weight bold :slant italic :foreground "red"))))
-   `(warning ((,class (:foreground "yellow"))))
-   `(success ((,class (:foreground "green"))))
+   `(error ((,class (:weight bold :slant italic :foreground ,yellow :background ,red))))
+   `(warning ((,class (:foreground ,yellow))))
+   `(success ((,class (:foreground ,green))))
 
    ;; Font lock faces
    `(font-lock-builtin-face ((,class (:foreground ,lgray))))
@@ -67,15 +78,15 @@
    `(font-lock-string-face ((,class (:foreground ,sgray))))
    `(font-lock-type-face ((,class (:weight bold :foreground ,lgray))))
    `(font-lock-variable-name-face ((,class (:weight bold :foreground ,sgray))))
-   `(font-lock-warning-face ((,class (:foreground "yellow"))))
+   `(font-lock-warning-face ((,class (:foreground ,yellow))))
 
    ;; Button and link faces
    `(link ((,class (:underline t :foreground ,lgray))))
    `(link-visited ((,class (:underline t :foreground ,lgray))))
 
    ;; Show-paren
-   `(show-paren-match ((t (:background ,sgray))))
-   `(show-paren-mismatch ((t (:background "red"))))
+   `(show-paren-match ((t (:background ,paren-match-bg :foreground ,white))))
+   `(show-paren-mismatch ((t (:background ,red :foreground ,white))))
 
    ;; Speedbar
    `(speedbar-button-face ((,class (:foreground ,dgray))))
@@ -154,8 +165,8 @@
    `(org-level-3 ((t (:bold t :foreground ,lgray :height 1.0))))
    `(org-level-4 ((t (:bold nil :foreground ,lgray :height 1.0))))
    `(org-link ((t (:foreground ,sgray :underline t))))
-   `(org-todo ((t (:bold t :foreground "red"))))
-   `(org-done ((t (:bold t :foreground "green"))))
+   `(org-todo ((t (:bold t :foreground ,red))))
+   `(org-done ((t (:bold t :foreground ,green))))
 
    ;; helm
    `(helm-header ((t (:foreground ,dgray :background ,black :underline nil :box nil))))
@@ -207,14 +218,14 @@
                                           :slant unspecified :underline ,lgray)))))
 
     ;; Magit
-  '(magit-diff-add ((t (:foreground "dark sea green"))))
-  '(magit-diff-del ((t (:foreground "light coral"))))
-  '(magit-diff-file-header ((t (:box (:line-width 2 :color "grey75" :style released-button)))))
+  '(magit-diff-add ((t (:foreground ,magit-diff-add-fg))))
+  '(magit-diff-del ((t (:foreground ,magit-diff-del-fg))))
+  '(magit-diff-file-header ((t (:box (:line-width 2 :color ,magit-diff-file-header :style released-button)))))
   '(magit-diff-hunk-header ((t (:weight bold))))
   '(magit-item-highlight ((t (:weight bold))))
 
   (custom-theme-set-variables
-   'monochrome
+   'monochrome-dark
    `(ansi-color-names-vector [,black ,lgray ,dgray ,sgray])))
 
 ;; Autoload for MELPA
