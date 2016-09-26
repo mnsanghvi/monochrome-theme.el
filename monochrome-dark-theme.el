@@ -16,7 +16,7 @@
 ;;
 ;; Works with Emacs 24.
 
-(deftheme monochrome
+(deftheme monochrome-dark
   "Gray on black for your focused hacking sessions.")
 
 (let ((class '((class color) (min-colors 10)))
@@ -44,7 +44,7 @@
    `(trailing-whitespace ((,class (:background "red"))))
 
    ;; Mode line faces
-   `(mode-line ((t (:background ,dgray :foreground ,white :box (:line-width -1 :style released-button)))))
+   `(mode-line ((t (:background ,dgray :weight bold :foreground ,black))))
    `(mode-line-inactive ((t (:background ,dgray :foreground ,lgray :box (:line-width -1 :style released-button)))))
 
    ;; Whitespace-mode
@@ -224,7 +224,7 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'monochrome)
+(provide-theme 'monochrome-dark)
 
 ;; Local Variables:
 ;; no-byte-compile: t
